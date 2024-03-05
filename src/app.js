@@ -7,6 +7,7 @@ let path = require('path');
 app.set('view engine', 'ejs');
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
+
 app.get('/', (req, res) => {
     const room = req.query.room || 'default-room';
     res.render('index', { room });
